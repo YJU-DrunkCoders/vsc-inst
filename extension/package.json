@@ -1,0 +1,55 @@
+{
+  "name": "instagram-vscode",
+  "displayName": "instagram-vscode",
+  "description": "Instagram for VSCode",
+  "version": "1.2.2",
+  "publisher": "aster18K",
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ASTER18K/vsc-instDM"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "instagram-vscode.openInstagramWeb",
+        "title": "Open Instagram in Tab"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "instagram-sidebar",
+          "title": "Instagram",
+          "icon": "images/sidebar_icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "instagram-sidebar": [
+        {
+          "type": "webview",
+          "id": "instagramWebview",
+          "name": "instagram"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.91.0",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}
